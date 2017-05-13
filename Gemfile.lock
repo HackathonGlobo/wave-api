@@ -121,15 +121,12 @@ PLATFORMS
 DEPENDENCIES
   byebug
   listen (~> 3.0.5)
-  pg (= 0.18.4)
+  pg (~> 0.18)
   puma (~> 3.0)
   rails (~> 5.0.3)
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
-
-RUBY VERSION
-   ruby 2.3.4p301
 
 BUNDLED WITH
    1.13.6
