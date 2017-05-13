@@ -83,3 +83,4 @@ test:
 production:
   <<: *default
   database: hackgloboapi_production
+  host: postgresql.hackathonglobo-api.svc 
