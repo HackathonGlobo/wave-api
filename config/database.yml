@@ -81,12 +81,5 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: ec2-54-163-254-76.compute-1.amazonaws.com
-  database: d2sat2jgneog50
-  username: ymsiybkcwljezi
-  password: 4e11dff3fd290f65825b5c7224b7006e4d9d032eabef499e4c79a356f4be8a72
+  <<: *default
+  database: hackgloboapi_production
