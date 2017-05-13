@@ -83,4 +83,4 @@ test:
 production:
   <<: *default
   database: hackgloboapi_production
-  host: postgresql
+  host: 172.30.6.89
