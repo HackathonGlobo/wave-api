@@ -86,3 +86,4 @@ production:
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: postgres://lpedojlxaprfod:5d26ff4bb0cafa377599bac80f72693572b1d33174fc1659adad9985615c0a0c@ec2-107-21-248-129.compute-1.amazonaws.com:5432/d32dsgfqh7935q
