@@ -1,0 +1,116 @@
+<html>   
+    <head>
+        <title>Globo Play</title>
+        <style>
+
+            body {
+                margin: 0;
+            }
+
+            .in-container .img-title {
+                background-image: url('play.jpg');
+                height: 150px;
+                position: relative;
+                background-position: center;
+                background-size: cover;
+                margin-bottom: 20px;
+            }
+
+            .in-container .img-title h1 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+                margin: 10px;
+                color: white;
+                font-family: "Open Sans", "Helvetica Neue";
+                font-size: 26px;
+                font-weight: 800;
+                text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4); 
+            }
+
+            .in-container .img-title .title-backdrop {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 100px;
+                background-color: black;
+
+                background: rgb(0, 0, 0);
+                background: -moz-linear-gradient(270deg, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 90%);
+                background: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 90%);
+                background: -o-linear-gradient(270deg, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 90%);
+                background: -ms-linear-gradient(270deg, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 90%);
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 90%);
+            }
+
+            .in-container .text {
+                padding: 0 10px;
+            }
+
+            .in-container .text h2 {
+                font-family: "Open Sans", "Helvetica Neue";
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: 26px;
+                color: #222;
+            }
+
+            .in-container .text h3 {
+                font-family: "Open Sans", "Helvetica Neue";
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: 22px;
+                color: #888;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #CCC;
+            }
+
+            .in-container .text h4 {
+                font-family: "Open Sans", "Helvetica Neue";
+                font-weight: 600;
+                font-size: 18px;
+                color: #666;
+                text-align: center;
+            }
+
+            .in-container .text p {
+                font-family: "Open Sans", "Helvetica Neue";
+                font-size: 15px;
+                color: #444;
+            }
+
+            .in-container .text .v-button {
+                margin: 0 auto;
+                display: block;
+            }
+        </style>
+        <script type="text/javascript">
+          function onVisaCheckoutReady (){
+            V.init({ apikey: "ZXWXPW3VYY9G1GRK81FQ21wg9un-KNTP-DRYQITQzJer8hx-c", 
+                      paymentRequest: {
+                        currencyCode: "BRL",
+                        total: "11.32"
+                    }});
+            V.on("payment.success", function(payment)
+              {alert(JSON.stringify(payment)); });
+            V.on("payment.cancel", function(payment)
+              {alert(JSON.stringify(payment)); });
+            V.on("payment.error", function(payment, error)
+              {alert(JSON.stringify(error)); });
+          }
+        </script>
+    </head> 
+    <body class="in-container">    
+        <div class="img-title img-play">
+            <div class="title-backdrop"></div>
+            <h1>Globo Play</h1>
+        </div>
+        <div class="text">
+            <img alt="Visa Checkout" class="v-button" role="button" src="https://sandbox.secure.checkout.visa.com/wallet-services-web/xo/button.png"/>
+            <h4>Assine agora com seu Visa e ganhe 5% de desconto!</h4>
+        </div>
+        <script type="text/javascript" src="https://sandbox-assets.secure.checkout.visa.com/
+checkout-widget/resources/js/integration/v1/sdk.js"></script>
+    </body>
+</html>
