@@ -4,7 +4,9 @@ class WavesController < ApplicationController
     if params.has_key? :code
       @wave = Wave.where(code: params[:code]).first
       if @wave
-        render json: @wave, status: 200
+        render json:  @wave, 
+                      except: [ :created_at, :updated_at ],
+                      status: 200
       else
         render json: { error: "Objeto não encontrado!", status: 404 }, status: 404
       end
