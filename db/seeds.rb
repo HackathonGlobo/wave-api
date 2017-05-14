@@ -8,7 +8,7 @@
 
 w1 = Wave.create({  code: "1",
                     caption: "A lei do amor", 
-                    title: "Veja o making of do atentado contra Fausto",
+                    title: "Veja a produção do acidente de Fausto",
                     img: "img/fausto.png",
                     is_merchan: false  })
 
