@@ -13,7 +13,7 @@ w1 = Wave.create({  code: "1",
                     is_merchan: false  })
 
 w2 = Wave.create({  code: "2",
-                    caption: "O perfume de Helô, para sua mãe", 
-                    title: "Natura Ekos",
-                    img: "img/ekos.png",
+                    caption: "Assine já com 5\% de desconto!", 
+                    title: "Globo Play",
+                    img: "img/play.jpg",
                     is_merchan: true  })
